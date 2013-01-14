@@ -1,36 +1,40 @@
-In this program the number of problems (N) are divided and assigned equally to each actor. A case class
-Sum_of_squares is defined that checks if the sum of squares of k consecutive numbers is a perfect 
-square. The program is tested with different number of Actors (2, 4, 10, 15 and 20) and the best ratio of 
-CPU time to Real time for a given problem size is observed with 10 Actors. For input N<10, the 
+In this program the number of problems (N) are divided and assigned equally to each actor. A case class Sum_of_squares is defined that checks if the sum of squares of k consecutive numbers is a perfect 
+square. The program is tested with different number of Actors (2, 4, 10, 15 and 20) and the best ratio of CPU time to Real time for a given problem size is observed with 10 Actors. For input N<10, the 
 number of actors assigned to solve the problem are 4. 
+
 The size of work unit (number of problems that a worker gets in a single request from boss) is 
 dependent on the number of workers. Best performance is observed when each worker is assigned 
 1/10th of the number of problems (that is, N/10). The observation was based on performance results 
 with 20, 15, 10, 4 and 2 workers. Given below are the observations: 
+
 a)For 20 workers: 
 time scala Project1 1000000 4 
 real 0m4.601s 
 user 0m7.480s 
 sys 0m0.168s 
 Ratio of CPU time to real time= 1.663 
+
 b)For 15 workers: 
 time scala Project1 1000000 4 
 real 0m2.166s 
 user 0m4.684s 
 sys 0m0.168s 
 Ratio of CPU time to real time= 2.241 
+
 c)For 10 workers: 
 time scala Project1 1000000 4 
 real 0m1.672s 
 user 0m4.332s 
 sys 0m0.116s 
 Ratio of CPU time to real time= 2.660 
+
 d) For 4 workers: 
 time scala Project1 1000000 4 
 real 0m0.684s 
 user 0m1.312s 
 sys 0m0.112s 
 Ratio of CPU time to real time= 2.082 
+
 e)For 2 workers: 
 time scala Project1 1000000 4 
 real 0m0.592s 
